@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather</title>
+  </head>
+  <body>
+    <header>
+      <div class="m-logo">
+        <img class="menu" src="images/burger-bar.svg" />
+        <img class="logo" src="images/forecastx.svg" />
+      </div>
+      <div class="m-search">
+        <div class="search">
+          <img class="search-img" src="images/search.svg" />
+          <input placeholder="Search a City or Location" type="text" />
+          <ul id="resultsList"></ul>
+          <img class="close" src="images/close.svg" />
+        </div>
+        <div class="inner3">
+          <p class="toggle1">Hourly</p>
+          <label class="switch">
+            <input type="checkbox" id="toggleSwitch" />
+            <span class="slider"></span>
+          </label>
+          <p class="toggle2">Weekly</p>
+        </div>
+        <div class="drop">
+          <img src="images/water-drop.svg" />
+        </div>
+      </div>
+    </header>
+    <div class="outer">
+      <div class="main">
+        <div class="inner">
+          <div class="box1">
+            <p id="curr-temp">19°C</p>
+            <img id="w-img" src="images/weather.svg" />
+          </div>
+          <div class="box2">
+            <div class="info">
+              <div class="temp">
+                <p id="hi-lo">H:24° &nbsp; L:19°</p>
+              </div>
+              <div class="location">
+                <p id="city">New Delhi, India</p>
+              </div>
+            </div>
+            <div class="status">
+              <p id="w-status">Mild Rain</p>
+            </div>
+          </div>
+        </div>
+        <div class="main1">
+          <div class="inner1"></div>
+          <div class="inner2"></div>
+        </div>
+      </div>
+    </div>
+    <script src="weathercodes.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

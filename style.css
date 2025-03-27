@@ -1,0 +1,419 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 3.2vmin;
+  color: white;
+  font-family: "Exo 2", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  overflow: hidden;
+}
+
+header {
+  height: 8vmin;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.m-logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30vmin;
+  height: 8vmin;
+}
+
+.menu {
+  height: 4vmin;
+  padding-top: 0.5vmin;
+}
+
+.logo {
+  height: 20vmin;
+}
+
+.m-search {
+  display: flex;
+  align-items: center;
+  gap: 5vmin;
+}
+
+.search {
+  width: 50vmin;
+  height: 4.5vmin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 0.5vmin;
+  position: relative;
+  z-index: 10;
+}
+
+.search-b {
+  border-radius: 0.5vmin 0.5vmin 0 0;
+}
+
+.search-img {
+  height: 3vmin;
+  padding-left: 2vmin;
+}
+
+.search input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  flex: 1;
+  padding-left: 1.5vmin;
+  font-size: 2vmin;
+  color: black;
+}
+
+#resultsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: white;
+  border: none;
+  max-height: 60vmin;
+  overflow-y: auto;
+  position: absolute;
+  width: 50vmin;
+  top: 4.5vmin;
+  z-index: 10;
+  border-radius: 0 0 0.5vmin 0.5vmin;
+}
+
+#resultsList li {
+  padding: 2vmin;
+  cursor: pointer;
+  color: #492f9c;
+  font-size: 2vmin;
+}
+
+#resultsList li:hover {
+  background: #f0f0f0;
+}
+
+.close {
+  height: 0;
+  opacity: 0;
+}
+
+.label-o {
+  height: 1.5vmin;
+  opacity: 0.5;
+  padding-right: 2vmin;
+  cursor: pointer;
+}
+
+.drop {
+  width: 5vmin;
+}
+
+.drop img {
+  height: 3.7vmin;
+  padding-top: 0.6vmin;
+  cursor: pointer;
+}
+
+.outer {
+  /* background-color: #2e2660; */
+  background-color: #291c4c;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6vmin;
+  gap: 7vmin;
+  overflow: hidden;
+  padding-top: 8vmin;
+}
+
+.main {
+  width: 150vmin;
+  height: 80vmin;
+  display: flex;
+  flex-direction: column;
+  gap: 3vmin;
+}
+
+.main-f {
+  filter: blur(10px);
+}
+
+.inner {
+  background-color: #492f9c;
+  width: 150vmin;
+  height: 40vmin;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 4vmin;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+/* .inner:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+} */
+
+.box1 {
+  width: 130vmin;
+  height: 25vmin;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box1 img {
+  width: 24vmin;
+  padding-top: 7vmin;
+}
+
+.box1 p {
+  font-size: 18vmin;
+  font-weight: 700;
+}
+
+.box2 {
+  width: 130vmin;
+  height: 15vmin;
+  display: flex;
+}
+
+.info {
+  width: 65vmin;
+  height: 15vmin;
+}
+
+.location {
+  width: 65vmin;
+  height: 9vmin;
+}
+
+.temp {
+  width: 65vmin;
+  height: 6vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 1.2vmin;
+  opacity: 0.7;
+}
+
+.location p {
+  font-size: 4vmin;
+}
+
+.status {
+  width: 65vmin;
+  height: 15vmin;
+  display: flex;
+  justify-content: flex-end;
+  padding: 5vmin 3vmin 0 0;
+  opacity: 0.7;
+}
+.main1 {
+  gap: 0;
+}
+
+.inner1,
+.inner2 {
+  background-color: rgba(130, 110, 250, 0.85);
+  max-width: 150vmin;
+  height: 22vmin;
+  border-radius: 4vmin;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  white-space: nowrap;
+  overflow-x: auto; /* Enables horizontal scrolling */
+  overflow-y: hidden;
+  gap: 3vmin;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  padding: 3vmin;
+}
+
+.inner2 {
+  display: none;
+}
+
+.hour {
+  height: 90%;
+  min-width: 8vmin; /* used this to achieve scrolling */
+  background-color: rgba(76, 71, 118, 0.7);
+  border: 0.15vmin solid rgba(255, 255, 255, 0.7);
+  border-radius: 4vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.now {
+  background-color: #492f9c;
+}
+
+.time {
+  font-size: 2vmin;
+}
+
+.hour img {
+  height: 5vmin;
+}
+
+.degree {
+  font-size: 2.5vmin;
+}
+
+.weekly {
+  height: 100%;
+  min-width: 15vmin;
+  background-color: rgba(76, 71, 118, 0.7);
+  border: 0.15vmin solid rgba(255, 255, 255, 0.7);
+  border-radius: 5vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.w-img {
+  height: 7vmin;
+}
+
+.day {
+  font-size: 3vmin;
+}
+
+.w-degree {
+  font-size: 2.5vmin;
+}
+
+.w-degree span {
+  font-size: inherit;
+  opacity: 0.6;
+}
+
+.hide {
+  display: none;
+}
+
+.visible {
+  display: flex;
+}
+
+.inner3 {
+  max-width: 150vmin;
+  height: 6vmin;
+  border-radius: 4vmin;
+  display: flex;
+  align-items: center;
+  gap: 1.5vmin;
+}
+
+.toggle1 {
+  font-size: 2.5vmin;
+  padding-bottom: 0.5vmin;
+}
+
+.toggle2 {
+  font-size: 2.5vmin;
+  padding-bottom: 0.5vmin;
+  opacity: 0.4;
+}
+
+.toggle-off {
+  opacity: 0.4;
+}
+
+.toggle-on {
+  opacity: 1;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 5vmin;
+  height: 2.5vmin;
+}
+
+.switch input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 2.5vmin;
+  transition: 0.4s;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 2vmin;
+  width: 2vmin;
+  left: 0.65vmin;
+  bottom: 0.27vmin;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #4caf50;
+}
+
+input:checked + .slider:before {
+  transform: translateX(2vmin);
+}
+
+/* additional rain elements */
+
+.chances {
+  font-size: 2.5vmin;
+}
+
+.w-chances {
+  font-size: 3.2vmin;
+}
+
+.wr-img {
+  height: 6.1vmin;
+}
+
+/* rain chances color */
+
+.yellow {
+  color: #f6cb42;
+}
+
+.orange {
+  color: #fab03c;
+}
+
+.dark-orange {
+  color: #ff6f00;
+}
+
+.red {
+  color: red;
+}
